@@ -1,0 +1,41 @@
+departments
+-
+dept_no INT PK
+dept_name VARCHAR(60)
+SQL-Challenge ERD
+
+titles
+-
+title_id INT PK
+title VATCHAR(255)
+
+
+employees
+-
+emp_no INT PK
+emp_title_id INT FK - titles.title_id
+birth_date DATE
+first_name VARCHAR(60)
+last_name VARCHAR(60)
+sex VARCHAR(10)
+hire_date DATE
+
+
+dept_emp
+-
+emp_no INT PK FK - employees.emp_no
+dept_no INT PK FK >- departments.dept_no
+
+
+dept_manager
+-
+emp_no INT PK FK - employees.emp_no
+dept_no INT PK FK >- departments.dept_no
+
+
+salaries
+-
+emp_no INT PK FK - employees.emp_no
+salary INT
+
+
